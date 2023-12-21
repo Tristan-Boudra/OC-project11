@@ -1,24 +1,46 @@
-@import "/src/styles/utils/variables";
+@import "../utils/variables";
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 30px 100px 0 100px;
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    .link {
+      text-decoration: none;
+      color: $primary;
+      font-size: 24px;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-.links {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
+// Responsive tablette
+@media screen and (max-width: 1024px) {
+}
 
-  .link {
-    text-decoration: none;
-    color: $primary;
-    font-size: 24px;
-    font-weight: 500;
-    &:hover {
-      text-decoration: underline;
+// Responsive mobile
+@media screen and (max-width: 768px) {
+  nav {
+    margin: 30px 20px 0 20px;
+
+    .logo {
+      width: 145px;
+    }
+
+    .links {
+      .link {
+        font-size: 12px;
+      }
     }
   }
 }

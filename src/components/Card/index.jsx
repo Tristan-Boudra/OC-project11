@@ -1,11 +1,12 @@
+import "../../styles/main.scss";
 import PropTypes from "prop-types";
 
-function Card({ label, title, picture }) {
+function Card({ title, picture }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", padding: 15 }}>
-      <span>{label}</span>
-      {/* <img src={picture} alt="freelance" height={80} width={80} /> */}
-      <span>{title}</span>
+    <div className="card">
+      <img src={picture} alt="freelance" className="imgCard" />
+      <div className="title">{title}</div>
+      <div className="overlay"></div>
     </div>
   );
 }
@@ -13,7 +14,7 @@ function Card({ label, title, picture }) {
 Card.propTypes = {
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
-  // picture: PropTypes.string,
+  picture: PropTypes.string,
 };
 
 Card.defaultProps = {
