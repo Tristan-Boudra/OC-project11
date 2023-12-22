@@ -18,7 +18,14 @@ nav {
       font-size: 24px;
       font-weight: 500;
       &:hover {
-        text-decoration: underline;
+        border-bottom: 2px solid $primary;
+      }
+    }
+
+    .active {
+      border-bottom: 2px solid $primary;
+      &:hover {
+        text-decoration: none;
       }
     }
   }

@@ -7,8 +7,7 @@ function Home() {
   return (
     <div>
       <div className="header">
-        <img src={header} alt="Logo Kasa" className="imgHeader" />
-        {/* <div className="overlay"></div> */}
+        <img src={header} alt="Banner" className="imgHeader" />
         <p className="textHeader">
           Chez vous,
           <br className="break" /> partout et ailleurs

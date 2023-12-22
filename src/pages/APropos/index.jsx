@@ -1,35 +1,46 @@
-import Card from "../../components/Card";
+import "../../styles/main.scss";
+import header from "../../assets/images/aPropos/header.png";
+import Collapse from "../../components/Collapse";
 
 function APropos() {
-  const freelanceProfiles = [
+  const dataCollapse = [
     {
-      name: "Jane Doe",
-      jobTitle: "Devops",
-      // picture: DefaultPicture,
+      title: "Fiabilite",
+      content:
+        "Les annonces postées sur Kasa ne sont pas forceMENT fiables. Elles sont soumises à nos tests exhaustifs. Un retraitement des photos est toujours prévu.",
     },
     {
-      name: "John Doe",
-      jobTitle: "Developpeur frontend",
-      // picture: DefaultPicture,
+      title: "Respect",
+      content:
+        "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminant ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
     },
     {
-      name: "Jeanne Biche",
-      jobTitle: "Développeuse Fullstack",
-      // picture: DefaultPicture,
+      title: "Service",
+      content:
+        "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+    },
+    {
+      title: "Sécurite",
+      content:
+        "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de veiller au respect des autres.",
     },
   ];
 
   return (
-    <div>
-      <h1>Freelances 👩‍💻👨‍💻👩‍💻</h1>
-      {freelanceProfiles.map((profile, index) => (
-        <Card
-          key={`${profile.name}-${index}`}
-          label={profile.jobTitle}
-          // picture={profile.picture}
-          title={profile.name}
-        />
-      ))}
+    <div className="aPropos">
+      <div className="header">
+        <img src={header} alt="Logo Kasa" className="imgHeader" />
+        {/* <div className="overlay"></div> */}
+      </div>
+      <div className="listeCollapse">
+        {dataCollapse.map((collapse, index) => (
+          <Collapse
+            key={`${collapse.title}-${index}`}
+            title={collapse.title}
+            content={collapse.content}
+          />
+        ))}
+      </div>
     </div>
   );
 }

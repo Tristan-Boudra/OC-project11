@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../../styles/main.scss";
 import logoKasa from "../../assets/images/logo/kasa.png";
 
@@ -7,12 +7,22 @@ function Header() {
     <nav>
       <img src={logoKasa} alt="Logo Kasa" className="logo" />
       <div className="links">
-        <Link to="/" className="link">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+        >
           Accueil
-        </Link>
-        <Link to="/a-propos" className="link">
+        </NavLink>
+        <NavLink
+          to="/a-propos"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+        >
           A propos
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
