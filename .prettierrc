@@ -1,8 +1,0 @@
-{
-  "extends": ["react-app"],
-  "rules": {
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2
-  }
-}
