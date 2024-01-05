@@ -1,6 +1,7 @@
 import "../../styles/main.scss";
 import header from "../../assets/images/aPropos/header.png";
 import Collapse from "../../components/Collapse";
+import Banner from "../../components/Banner";
 
 function APropos() {
   const dataCollapse = [
@@ -28,10 +29,7 @@ function APropos() {
 
   return (
     <div className="aPropos">
-      <div className="header">
-        <img src={header} alt="Logo Kasa" className="imgHeader" />
-        {/* <div className="overlay"></div> */}
-      </div>
+      <Banner src={header} />
       <div className="listeCollapse">
         {dataCollapse.map((collapse, index) => (
           <Collapse

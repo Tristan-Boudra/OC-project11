@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 nav {
   display: flex;
@@ -216,6 +218,127 @@ nav .links .active:hover {
     margin: 19px 20px 19px 20px;
   }
 }
+.containerFiche {
+  margin: 50px 100px 50px 100px;
+}
+.containerFiche .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.containerFiche .container .headerFiche {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.containerFiche .container .headerFiche .fiche h2 {
+  color: #ff6060;
+  font-size: 36px;
+}
+.containerFiche .container .headerFiche .fiche p {
+  font-size: 18px;
+}
+.containerFiche .container .headerFiche .location {
+  font-size: 18px;
+  color: #ff6060;
+}
+.containerFiche .container .headerFiche .tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  list-style: none;
+}
+.containerFiche .container .headerFiche .tags .tag {
+  border-radius: 10px;
+  padding: 3px 10px;
+  font-size: 14px;
+  min-width: 115px;
+  text-align: center;
+  background-color: #ff6060;
+  color: white;
+}
+.containerFiche .container .containerInfo {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px 0 24px 0;
+}
+.containerFiche .container .containerInfo .ratings .star-rating {
+  display: flex;
+  align-items: center;
+}
+.containerFiche .container .containerInfo .ratings .star {
+  color: #ff6060;
+  margin-right: 4px;
+}
+.containerFiche .container .containerInfo .ratings .star.gray {
+  color: gray;
+}
+.containerFiche .container .containerInfo .host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.containerFiche .container .containerInfo .host p {
+  font-size: 18px;
+  width: 100px;
+  text-align: right;
+  color: #ff6060;
+}
+.containerFiche .container .containerInfo .host img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+.containerFiche .containerCollapse {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 76px;
+  margin-top: 24px;
+}
+.containerFiche .containerCollapse .collapse {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .containerFiche {
+    margin: 50px 20px 50px 20px;
+  }
+  .containerFiche .container {
+    flex-direction: column;
+  }
+  .containerFiche .container .headerFiche .fiche h2 {
+    font-size: 18px;
+  }
+  .containerFiche .container .headerFiche .location {
+    font-size: 14px;
+  }
+  .containerFiche .container .headerFiche .tags .tag {
+    font-size: 10px;
+  }
+  .containerFiche .container .containerInfo {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .containerFiche .container .containerInfo .host p {
+    font-size: 12px;
+  }
+  .containerFiche .container .containerInfo .host img {
+    width: 32px;
+    height: 32px;
+  }
+  .containerFiche .containerCollapse {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -296,6 +419,44 @@ nav .links .active:hover {
     font-size: 13px;
   }
 }
+.slideShow {
+  display: flex;
+  height: 415px;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que le contenu débordant est caché */
+}
+.slideShow .imgSlide {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.slideShow .chevronLeft,
+.slideShow .chevronRight {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  width: 46px;
+  height: 80px;
+}
+.slideShow .chevronLeft {
+  left: 10px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.slideShow .chevronRight {
+  right: 10px;
+  transform: translateY(-50%) rotate(90deg);
+}
+.slideShow .pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;

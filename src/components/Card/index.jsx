@@ -1,24 +1,26 @@
+import { Link } from "react-router-dom";
 import "../../styles/main.scss";
 import PropTypes from "prop-types";
 
-function Card({ title, picture }) {
+function Card(props) {
   return (
-    <div className="card">
-      <img src={picture} alt="freelance" className="imgCard" />
-      <div className="title">{title}</div>
+    <Link to={`/fiche-logement/${props.id}`} className="card">
+      <img
+        src={props.picture}
+        key={props.cardKey}
+        alt="freelance"
+        className="imgCard"
+      />
+      <div className="title">{props.title}</div>
       <div className="overlay"></div>
-    </div>
+    </Link>
   );
 }
 
 Card.propTypes = {
-  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   picture: PropTypes.string,
-};
-
-Card.defaultProps = {
-  title: "No title",
 };
 
 export default Card;

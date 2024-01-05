@@ -1,0 +1,161 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.containerFiche {
+  margin: 50px 100px 50px 100px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .headerFiche {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .fiche {
+        h2 {
+          color: $primary;
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .location {
+        font-size: 18px;
+        color: $primary;
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        list-style: none;
+
+        .tag {
+          border-radius: 10px;
+          padding: 3px 10px;
+          font-size: 14px;
+          min-width: 115px;
+          text-align: center;
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+
+    .containerInfo {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 20px 0 24px 0;
+
+      .ratings {
+        .star-rating {
+          display: flex;
+          align-items: center;
+        }
+
+        .star {
+          color: $primary;
+          margin-right: 4px;
+
+          &.gray {
+            color: gray;
+          }
+        }
+      }
+
+      .host {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        p {
+          font-size: 18px;
+          width: 100px;
+          text-align: right;
+          color: $primary;
+        }
+
+        img {
+          border-radius: 50%;
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+  }
+
+  .containerCollapse {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 76px;
+    margin-top: 24px;
+
+    .collapse {
+      width: 100%;
+    }
+  }
+}
+
+// Responsive tablette
+@media screen and (max-width: 1024px) {
+}
+
+// Responsive mobile
+@media screen and (max-width: 768px) {
+  .containerFiche {
+    margin: 50px 20px 50px 20px;
+    .container {
+      flex-direction: column;
+
+      .headerFiche {
+        .fiche {
+          h2 {
+            font-size: 18px;
+          }
+        }
+
+        .location {
+          font-size: 14px;
+        }
+
+        .tags {
+          .tag {
+            font-size: 10px;
+          }
+        }
+      }
+      .containerInfo {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .host {
+          p {
+            font-size: 12px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+
+    .containerCollapse {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.slideShow {
+  display: flex;
+  height: 415px;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que le contenu débordant est caché */
+
+  .imgSlide {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .chevronLeft,
+  .chevronRight {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    width: 46px;
+    height: 80px;
+  }
+
+  .chevronLeft {
+    left: 10px;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  .chevronRight {
+    right: 10px;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 16px;
+  }
+}

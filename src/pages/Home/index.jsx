@@ -1,24 +1,20 @@
 import "../../styles/main.scss";
 import header from "../../assets/images/home/header.png";
 import Card from "../../components/Card";
+import Banner from "../../components/Banner";
 import data from "../../data/index.json";
 
 function Home() {
   return (
     <div>
-      <div className="header">
-        <img src={header} alt="Banner" className="imgHeader" />
-        <p className="textHeader">
-          Chez vous,
-          <br className="break" /> partout et ailleurs
-        </p>
-      </div>
+      <Banner src={header} text="Chez vous, partout et ailleurs" />
       <div className="listeLocation">
         {data.map((logement, index) => (
           <Card
-            key={`${logement.title}-${index}`}
+            cardKey={index}
             picture={logement.cover}
             title={logement.title}
+            id={logement.id}
           />
         ))}
       </div>
