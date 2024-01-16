@@ -9,9 +9,9 @@ function Home() {
     <div>
       <Banner src={header} text="Chez vous, partout et ailleurs" />
       <div className="listeLocation">
-        {data.map((logement, index) => (
+        {data.map((logement) => (
           <Card
-            cardKey={index}
+            key={logement.id}
             picture={logement.cover}
             title={logement.title}
             id={logement.id}
